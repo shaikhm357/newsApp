@@ -4,7 +4,7 @@ import Option from './components/Option'
 function App() {
   return (
     <div className="App">
-        <h1>hello world</h1>
+        <h1>WORLD NEWS APP </h1>
         <Option/>
         
     </div>

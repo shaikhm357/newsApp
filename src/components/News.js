@@ -1,6 +1,8 @@
 import React,{useState , useEffect} from 'react'
+import '../styles/content.css'
 
 function News({ country, catgory }) {
+    const [headLine, setHeadLine] = useState([]);
     useEffect(() => {
         fetchData()
     }, [catgory,country])
@@ -12,6 +14,7 @@ function News({ country, catgory }) {
             const res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${catgory}&apiKey=${apiKey}`)
             const data = await res.json()
             console.log(data)
+            setHeadLine(data.articles)
 
         }catch(err){
             console.log(err)
@@ -20,8 +23,13 @@ function News({ country, catgory }) {
 
     return (
         <div>
-            <h3>{country}</h3>
-            <h3>{catgory}</h3>
+           {
+               headLine.map((topline,index)=>(
+                   <div className="content">
+                       <h3 key={index} >{topline.content}</h3>
+                   </div>
+               ))
+           } 
 
         </div>
     )
