@@ -4,10 +4,11 @@
     margin-bottom: 20px;
     border: 1px solid rgb(160, 156, 156);
     border-radius: 1em;
-    padding: 10px;
+    padding: 40px;
     max-width: 750px;
+
+    
 }
 .content > h3{
     font-weight: 400;
-    font-size:x-large;
 }

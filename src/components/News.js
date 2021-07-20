@@ -27,6 +27,8 @@ function News({ country, catgory }) {
                headLine.map((topline,index)=>(
                    <div className="content">
                        <h3 key={index} >{topline.content}</h3>
+                       <p style={{color:"grey", float:"right", fontSize:"small"}} >{topline.publishedAt}</p>
+                       <p style={{marginTop:"2em",fontSize:"small" ,color:"green"}} >{topline.description}</p>
                    </div>
                ))
            } 
